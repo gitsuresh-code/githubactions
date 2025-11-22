@@ -1,9 +1,10 @@
 name: CI/CD - Build, Push, and Scan ECR Image with Versioned Tags
 
 on:
+  workflow_dispatch:  # Enables manual run from GitHub Actions UI
   push:
     branches:
-      - main  # Change if your branch is different
+      - main  # Still runs automatically on push
 
 env:
   AWS_REGION: us-east-1
